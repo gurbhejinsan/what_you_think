@@ -5,8 +5,10 @@
 }
 html,
 body {
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
 }
 input:focus {
   outline: none;
@@ -21,6 +23,10 @@ main {
   background-color: pink;
 }
 .box {
+  position: absolute;
+  left: 50%;
+  top: 50;
+  transform: translate(-50%,0%);
   background: rgb(247, 225, 229);
   height: 70%;
   width: 90%;
@@ -41,13 +47,27 @@ main {
 .waiting{
   float: right;
 }
-.box div:nth-child(2) {
+
+/*
+|-----------------------------|
+|type box
+|-----------------------------|
+*/
+.typeBox {
   padding: 1rem;
   grid-row:   span  5;
-  /* box-shadow: -5px -5px  20px rgba(148, 147, 147, 0.308) inset; */
   box-shadow: 0 0  20px rgba(148, 147, 147, 0.308) inset;
+  word-spacing: 2px;
+  line-height: 1.5rem;
+  text-align: justify;
 
 }
+
+/*
+|-----------------------------|
+|button group
+|-----------------------------|
+*/
 .box div:nth-child(3){
   display: flex;
   justify-content: space-evenly;
@@ -56,7 +76,8 @@ main {
 }
 
 
-.box div:nth-child(3) button{
+
+.box div:nth-child(3)  button{
   padding: 1rem 2rem;
   border-radius: 10px;
   font-size: 1rem;
@@ -67,19 +88,122 @@ main {
   box-shadow: 5px 5px 15px rgba(90, 90, 90, 0.24);
 }
 
-.box div:nth-child(3) button:first-child{
+.box div:nth-child(3) div:first-child button{
   background: rgb(113, 238, 113);
 }
-.box div:nth-child(3) button:first-child:active{
+.box div:nth-child(3) div:first-child button:active{
   background: rgba(113, 238, 113, 0.527);
   box-shadow: none;
 
 }
-.box div:nth-child(3) button:nth-child(2){
+.box div:nth-child(3) div:nth-child(2) button{
   background: rgb(238, 113, 113);
 }
-.box div:nth-child(3) button:nth-child(2):active{
+.box div:nth-child(3) div:nth-child(2) button:active{
   background: rgba(238, 113, 113, 0.527);
 }
 
 
+
+/*
+|-----------------------------|
+|Say no
+|-----------------------------|
+*/
+
+.sayNo{
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background: #0000008f;
+  display: flex;
+  left: -100%;
+  justify-content: center;
+  align-items: center;
+  transition:  all .3s ease-in;
+}
+.sayNo.sayNull{
+  left:0;
+}
+.sayNo >div{
+  display: grid;
+  border-radius: 10px;
+  width: 80%;
+  min-height: 60%;
+  background: rgb(247, 225, 229);
+}
+
+
+.sayNo div div:nth-child(1){ 
+  display: flex;
+  justify-content: center;
+  align-items: center
+  ;
+}
+.sayNo div div:nth-child(2){
+  min-height: 100%;
+  box-shadow: 0 0  20px rgba(148, 147, 147, 0.308) inset;
+}
+
+
+
+/*
+|-----------------------------|
+|Hears
+|-----------------------------|
+*/
+
+.bg_heart {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden
+ }
+
+.heart {
+    position: absolute;
+    top: -50%;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -m-transform: rotate(-45deg);
+    transform: rotate(-45deg)
+ }
+
+.heart:before {
+    position: absolute;
+    top: -50%;
+    left: 0;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    border-radius: 100%;
+}
+
+.heart:after {
+    position: absolute;
+    top: 0;
+    right: -50%;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    border-radius: 100%;
+}
+
+@-webkit-keyframes love {
+  0%{top:110%}
+}
+@-moz-keyframes love {
+  0%{top:110%}
+}
+@-ms-keyframes love {
+  0%{top:110%}
+}
+@keyframes love {
+  0%{top:110%}
+}
