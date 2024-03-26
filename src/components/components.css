@@ -67,12 +67,14 @@
 .confetti {
     display: flex;
     justify-content: center;
+    top: 0;
     align-items: center;
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 70%;
+    background: transparent;
     overflow: hidden;
-    z-index: 1000;
+    z-index: 500;
 }
 .confetti-piece {
     position: absolute;
@@ -197,4 +199,29 @@
     from {opacity: 0;}
     50% {opacity: 1;}
     to {-webkit-transform: translateY(350px);}
+}
+
+/*
+|-----------------------------|
+|Thanks
+|-----------------------------|
+*/
+
+.thanks_gif{
+    display: flex;
+    justify-content: center;
+
+}
+
+.Contactbtn a{
+    position: relative;
+    z-index: 1000;
+    background: rgba(0, 174, 255, 0.774);
+    font-size: 1rem;
+    text-decoration: none;
+
+}
+.Contactbtn a::after{
+    content: '😊';
+    margin-left: .5rem;
 }

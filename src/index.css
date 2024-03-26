@@ -26,7 +26,7 @@ main {
   position: absolute;
   left: 50%;
   top: 50;
-  transform: translate(-50%,0%);
+  transform: translate(-50%, 0%);
   background: rgb(247, 225, 229);
   height: 70%;
   width: 90%;
@@ -36,15 +36,15 @@ main {
   grid-template-rows: repeat(8, calc(70% / 8));
 }
 .box div:first-child {
-  grid-row:  span 4;
+  grid-row: span 4;
   position: relative;
 }
-.box div:first-child img{
+.box div:first-child img {
   height: 100%;
   width: 50%;
 }
 
-.waiting{
+.waiting {
   float: right;
 }
 
@@ -54,15 +54,15 @@ main {
 |-----------------------------|
 */
 .typeBox {
+  font-family: "Cedarville Cursive", cursive;
   display: flex;
   align-items: start;
   padding: 1rem;
-  grid-row:   span  5;
-  box-shadow: 0 0  20px rgba(148, 147, 147, 0.308) inset;
+  grid-row: span 5;
+  box-shadow: 0 0 20px rgba(148, 147, 147, 0.308) inset;
   word-spacing: 2px;
   line-height: 1.5rem;
   text-align: justify;
-
 }
 
 /*
@@ -70,42 +70,37 @@ main {
 |button group
 |-----------------------------|
 */
-.box div:nth-child(3){
+.box div:nth-child(3) {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  
 }
 
-
-
-.box div:nth-child(3)  button{
+.btn {
   padding: 1rem 2rem;
   border-radius: 10px;
   font-size: 1rem;
-  font-weight: 500; 
+  font-weight: 500;
   color: white;
   border: none;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   box-shadow: 5px 5px 15px rgba(90, 90, 90, 0.24);
+  cursor: pointer;
 }
 
-.box div:nth-child(3) div:first-child button{
+.box div:nth-child(3) div:first-child button {
   background: rgb(113, 238, 113);
 }
-.box div:nth-child(3) div:first-child button:active{
+.box div:nth-child(3) div:first-child button:active {
   background: rgba(113, 238, 113, 0.527);
   box-shadow: none;
-
 }
-.box div:nth-child(3) div:nth-child(2) button{
+.box div:nth-child(3) div:nth-child(2) button {
   background: rgb(238, 113, 113);
 }
-.box div:nth-child(3) div:nth-child(2) button:active{
+.box div:nth-child(3) div:nth-child(2) button:active {
   background: rgba(238, 113, 113, 0.527);
 }
-
-
 
 /*
 |-----------------------------|
@@ -113,7 +108,7 @@ main {
 |-----------------------------|
 */
 
-.sayNo{
+.sayNo {
   position: absolute;
   height: 100vh;
   width: 100vw;
@@ -122,12 +117,12 @@ main {
   left: -100%;
   justify-content: center;
   align-items: center;
-  transition:  all .3s ease-in;
+  transition: all 0.3s ease-in;
 }
-.sayNo.sayNull{
-  left:0;
+.sayNo.sayNull {
+  left: 0;
 }
-.sayNo >div{
+.sayNo > div {
   display: grid;
   border-radius: 10px;
   width: 80%;
@@ -135,15 +130,19 @@ main {
   background: rgb(247, 225, 229);
 }
 
-
-.sayNo div div:nth-child(1){ 
+.sayNo div div:nth-child(1) {
   display: flex;
   justify-content: center;
-  align-items: center
-  ;
+  align-items: center;
 }
-.sayNo div div:nth-child(2){
+.sayNo div div:nth-child(2) {
   min-height: 100%;
-  box-shadow: 0 0  20px rgba(148, 147, 147, 0.308) inset;
+  box-shadow: 0 0 20px rgba(148, 147, 147, 0.308) inset;
 }
 
+@media (width> 600px) {
+  .box {
+    height: 90%;
+    width: 40%;
+  }
+}
