@@ -1,3 +1,6 @@
+
+
+
 * {
   margin: 0;
   padding: 0;
@@ -14,7 +17,22 @@ input:focus {
   outline: none;
 }
 
+
+.darkPink{
+  background:#F890A1;
+/* color: ; */
+}
+
+.center-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
 main {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,7 +45,7 @@ main {
   left: 50%;
   top: 50;
   transform: translate(-50%, 0%);
-  background: rgb(247, 225, 229);
+  background: #f7e1e5;
   height: 70%;
   width: 90%;
   border-radius: 10px;

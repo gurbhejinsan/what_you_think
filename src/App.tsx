@@ -1,14 +1,19 @@
 import { useState } from "react";
-import Celebration from "./components/Celebration";
-import HeartAnimation from "./components/HeartGoes";
-import No from "./components/No";
-import Thanks from "./components/Thanks";
-import WaitFile from "./components/WaitFile";
+import { Celebration, HeartAnimation, LoginForm, No, Thanks, WaitFile } from "./components";
+import { useAppContext } from "./strore/useAppContext";
 
 const App = () => {
   const [Response, setResponse] = useState<boolean | null>(null);
   const [IsTrue, setIsTrue] = useState(false);
+  const { state } = useAppContext();
 
+  if (!state.Verify) {
+    return (
+      <main>
+        <LoginForm />
+      </main>
+    );
+  }
   return (
     <main>
       {!IsTrue ? (

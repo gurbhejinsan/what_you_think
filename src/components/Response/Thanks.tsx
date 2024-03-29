@@ -1,4 +1,4 @@
-import TypeWriter from "./TypeWriter";
+import TypeWriter from "../Animation/TypeWriter";
 
 const thanks =
   "I couldn't imagine that you accepted me, thank you from the heart, I didn't believe what you did, it was a little effort, but I worked very hard for it, thanks for everything. 😊";
@@ -8,7 +8,7 @@ const Thanks = () => {
       <div className="thanks_gif">
         <img src="gifs/thanks.gif " alt="" />
       </div>
-      <div className="typeBox">
+      <div className="typeBox"> 
         <TypeWriter paragraph={thanks} />
       </div>
       <div className="Contactbtn">
@@ -19,6 +19,7 @@ const Thanks = () => {
         >
           Contact Me
         </a>
+        {/* <Button></Button> */}
         {/* <button className="btn" onClick={handleNavigateToInstagram}> 
         Home
          </button> */}

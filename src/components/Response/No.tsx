@@ -1,6 +1,6 @@
-import { CommanProps } from "./interface/comman";
+import { ICommanProps } from "../../interface/comman";
 
-const No = ({ setResponse, Response }: CommanProps) => {
+const No = ({ setResponse, Response }: ICommanProps) => {
   return (
     <div
       className={` sayNo ${Response == false && "sayNull"}`}
