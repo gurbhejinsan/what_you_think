@@ -1,4 +1,4 @@
-import { thanks } from "../../constant";
+import { redirecting, thanks } from "../../constant.ts";
 import TypeWriter from "../Animation/TypeWriter";
 
 const Thanks = () => {
@@ -13,7 +13,7 @@ const Thanks = () => {
       <div className="Contactbtn">
         <a
           className="btn"
-          href={`https://www.instagram.com/direct/t/17844248741746543/`}
+          href={redirecting}
           target="_blank"
         >
           Contact Me

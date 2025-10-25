@@ -8,12 +8,12 @@ const Button = ({children,color="" ,className="",onClick,...props}:PropsWithChil
     <button className={'hover__btn ' + className} {...props} onClick={onClick}>
     <div>
       <span className={color}>
-        <p>{children}</p><p>:)</p>
+        <p>{children}</p>
       </span>
     </div>
     <div>
       <span>
-        <p>Thanks</p><p>:D</p>
+        <p>Thanks</p>😌
       </span>
     </div>
   </button>

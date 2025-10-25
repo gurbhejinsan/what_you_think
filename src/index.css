@@ -1,6 +1,3 @@
-
-
-
 * {
   margin: 0;
   padding: 0;
@@ -17,19 +14,16 @@ input:focus {
   outline: none;
 }
 
-
-.darkPink{
-  background:#F890A1;
-/* color: ; */
+.darkPink {
+  background: #f890a1;
+  /* color: ; */
 }
 
-.center-item{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.center-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-
 
 main {
   position: relative;
@@ -41,27 +35,27 @@ main {
   background-color: pink;
 }
 .box {
-  position: absolute;
-  left: 50%;
-  top: 50;
-  transform: translate(-50%, 0%);
   background: #f7e1e5;
   height: 70%;
+  z-index: 2;
   width: 90%;
   border-radius: 10px;
-  overflow: hidden;
   display: grid;
   grid-template-rows: repeat(8, calc(70% / 8));
 }
 .box div:first-child {
-  grid-row: span 4;
+  grid-row: span 2;
   position: relative;
 }
 .box div:first-child img {
-  height: 100%;
-  width: 50%;
+  height: 80%;
+  aspect-ratio: 1/1;
 }
 
+.box div:nth-child(3) {
+  padding: 10px;
+  /* grid-row: span 2; */
+}
 .waiting {
   float: right;
 }
@@ -72,11 +66,14 @@ main {
 |-----------------------------|
 */
 .typeBox {
-  font-family: "Cedarville Cursive", cursive;
+  font-family: "Delius Unicase", cursive;
+  font-size: smaller;
   display: flex;
+  overflow-y: auto;
+
   align-items: start;
   padding: 1rem;
-  grid-row: span 5;
+  grid-row: span 8;
   box-shadow: 0 0 20px rgba(148, 147, 147, 0.308) inset;
   word-spacing: 2px;
   line-height: 1.5rem;
@@ -107,14 +104,15 @@ main {
 }
 
 .box div:nth-child(3) div:first-child button {
-  background: rgb(113, 238, 113);
+  background: rgba(8, 192, 8, 0.369);
+  color: rgb(6, 99, 6);
 }
 .box div:nth-child(3) div:first-child button:active {
-  background: rgba(113, 238, 113, 0.527);
-  box-shadow: none;
+  background: #f890a1;
 }
 .box div:nth-child(3) div:nth-child(2) button {
-  background: rgb(238, 113, 113);
+  background: rgba(192, 8, 8, 0.369);
+  color: rgb(99, 6, 6);
 }
 .box div:nth-child(3) div:nth-child(2) button:active {
   background: rgba(238, 113, 113, 0.527);
@@ -132,6 +130,7 @@ main {
   width: 100vw;
   background: #0000008f;
   display: flex;
+  z-index: 10;
   left: -100%;
   justify-content: center;
   align-items: center;
@@ -158,7 +157,7 @@ main {
   box-shadow: 0 0 20px rgba(148, 147, 147, 0.308) inset;
 }
 
-@media (width> 600px) {
+@media (width> 750px) {
   .box {
     height: 90%;
     width: 40%;

@@ -8,7 +8,7 @@ const TypeWriter = ({paragraph}:{paragraph:string}) => {
         onInit={(typewriter) => {
           typewriter
             .typeString(paragraph)
-            .pauseFor(1000)
+            .pauseFor(10)
             // .deleteAll()
             .start();
         }}

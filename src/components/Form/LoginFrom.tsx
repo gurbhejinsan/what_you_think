@@ -1,7 +1,7 @@
 import { useState } from "react";
 import OTPInput from "./OtpInput";
 import Button from "./Button";
-import { Enter_code } from "../../constant";
+import { Enter_code } from "../../constant.ts";
 import { useAppContext } from "../../strore/useAppContext";
 const LoginFrom = () => {
   const [otp, setOtp] = useState("");
@@ -22,7 +22,7 @@ const LoginFrom = () => {
         <OTPInput length={4} onChange={(otp) => setOtp(otp)} />
         <div>
           <Button color={"darkPink"} onClick={handleClick}>
-            Submit
+            Submit 🙃
           </Button>
         </div>
       </div>
